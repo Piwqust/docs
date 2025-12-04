@@ -4,9 +4,9 @@
   "name": "layersense",
   "description": "AI-powered layer renaming for Figma. Stop wasting time manually renaming layers.",
   "colors": {
-    "primary": "#6366F1",
-    "light": "#818CF8",
-    "dark": "#4F46E5"
+    "primary": "#57592A",
+    "light": "#dbe0d9",
+    "dark": "#57592A"
   },
   "favicon": "/favicon.svg",
   "navigation": {

@@ -1,72 +1,33 @@
 ---
-title: "Features & Settings"
-description: "Tailor exactly how the AI names your layers"
+title: "features & settings"
+description: "tailor exactly how the ai names your layers"
 icon: "sliders"
 ---
 
-Access these options by clicking the **Settings (⚙)** toggle.
+— (4) detailed features & settings
 
-## Prompt Settings
+access these options by clicking the **settings (⚙)** toggle.
 
-Tailor exactly how the AI names your layers:
+## prompt settings
 
-<AccordionGroup>
-  <Accordion title="Output Language">
-    - `auto` — detects language based on content
-    - `en` — forces English names (recommended)
-    - `ru` — forces Russian names
-  </Accordion>
+– tailor exactly how the ai names your layers:
+  - output language: force names in `en` (english), `ru` (russian), or let it detect automatically (`auto`).
+  - style: enforce code standards like `camelCase`, `kebab-case`, `snake_case`, or standard `Title Case`.
+  - word count: set a constraint range (e.g., "2-4 words") to keep names concise or descriptive.
 
-  <Accordion title="Naming Style">
-    - `Title Case` (e.g., "Submit Button")
-    - `camelCase` (e.g., "submitButton")
-    - `kebab-case` (e.g., "submit-button")
-    - `snake_case` (e.g., "submit_button")
-    - `flatcase` (e.g., "submitbutton")
-  </Accordion>
+– focus strategy:
+  - function: names based on what the element *does* (e.g., "submitbutton").
+  - content: names based on the text inside (e.g., "startfreetriallabel").
+  - context: names based on the location in the layout (e.g., "headercontainer").
 
-  <Accordion title="Word Count">
-    Set a constraint range (e.g., **2-4 words**) to keep names concise or descriptive.
-  </Accordion>
-</AccordionGroup>
+– detail level: switch between **minimal** (short), **descriptive**, or **detailed** (verbose) naming.
 
-## Focus Strategy
+– parent context: when enabled, the ai looks at the parent layers to understand where the element lives (crucial for nested auto-layouts).
 
-Tell the AI what is most important:
+– custom rules: the "god mode" for naming. type instructions like "always add 'btn-' prefix to buttons" or "don't use the word 'frame'", and the ai will obey.
 
-<CardGroup cols={3}>
-  <Card title="Function" icon="bolt">
-    Names based on what the element *does* (e.g., `SubmitButton`). Best for interactive components.
-  </Card>
-  <Card title="Content" icon="text">
-    Names based on the *text* or image inside (e.g., `StartFreeTrialLabel`). Best for text layers.
-  </Card>
-  <Card title="Context" icon="layer-group">
-    Names based on the *location* in the layout (e.g., `HeaderContainer`). Best for layout frames.
-  </Card>
-</CardGroup>
+## utilities
 
-## Advanced Controls
-
-| Setting | Description |
-|---------|-------------|
-| **Detail Level** | Switch between **minimal** (short), **descriptive**, or **detailed** (verbose) naming |
-| **Parent Context** | When enabled, the AI looks at parent layers to understand where the element lives. Crucial for nested auto layouts |
-
-## Custom Rules ("God Mode")
-
-Type natural language instructions to the AI.
-
-<Tip>
-**Examples:**
-- "Always add a 'btn-' prefix to interactive elements."
-- "Never use the word 'frame' or 'group'."
-- "If a layer contains an icon, end the name with '_icon'."
-- "Translate all text content to Spanish."
-</Tip>
-
-## Utilities
-
-- **Statistics** — track how many layers you've successfully renamed
-- **Developer Mode** — enables detailed error logging
-- **Batch Processing** — processes layers in batches of 15 to avoid rate limits
+– **statistics** — track how many layers you've successfully renamed
+– **developer mode** — enables detailed error logging
+– **batch processing** — processes layers in batches of 15 to avoid rate limits

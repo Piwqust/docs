@@ -1,70 +1,34 @@
 ---
-title: "API Providers"
-description: "How to use the plugin 100% for free with Google Gemini, OpenRouter, Cerebras, or local LLMs"
+title: "api providers"
+description: "how to use the plugin 100% for free"
 icon: "key"
 ---
 
-layersense is "bring your own key", meaning you are not locked into a subscription.
+— (5) api & provider settings
 
-## Free Providers
+flexible connection options to suit your budget and privacy needs:
 
-<Info>
-You don't need a credit card. Here is where to get free access:
-</Info>
+– providers: native support for openai, anthropic (claude), google gemini, openrouter, cerebras, and local llms (via lm studio).
+– model selection: manually type any model name (e.g., `gpt-4o`, `qwen-2.5`, `gemini-1.5-flash`).
+– temperature: control the "creativity" of the ai (lower is more consistent).
+– export/import: save your settings and api configurations to transfer them between files or share with teammates.
 
-<Tabs>
-  <Tab title="Google Gemini (Recommended)">
-    **Get Key:** [aistudio.google.com](https://aistudio.google.com/)
-    
-    **Models:**
-    - `gemini-1.5-flash` (fastest)
-    - `gemini-2.0-flash-exp`
-    
-    <Note>High rate limits, perfect for heavy usage.</Note>
-  </Tab>
-  
-  <Tab title="Cerebras">
-    **Get Key:** [cloud.cerebras.ai](https://cloud.cerebras.ai/)
-    
-    **Model:** `llama3.1-70b`
-    
-    <Note>Incredibly fast, though context may be limited during peak traffic.</Note>
-  </Tab>
-  
-  <Tab title="OpenRouter">
-    **Get Key:** [openrouter.ai](https://openrouter.ai/)
-    
-    **Free Models:**
-    - `mistralai/mistral-7b-instruct:free`
-    - `meta-llama/llama-3-8b-instruct:free`
-  </Tab>
-  
-  <Tab title="Local LLMs">
-    **Download:** [lmstudio.ai](https://lmstudio.ai/)
-    
-    **Setup:**
-    1. Install LM Studio
-    2. Load a model (e.g., `Qwen 2.5` or `Llama 3.2`)
-    3. Start the **Local Inference Server**
-    4. In layersense, select **Local (LM Studio)**
-    
-    <Check>Zero data leaves your computer.</Check>
-  </Tab>
-</Tabs>
+— (6) how to run it for free
 
-## Commercial Providers
+you don't need a credit card. here is where to get free access:
 
-If you have a key, we also support:
+– google gemini: get a free api key with generous limits at [aistudio.google.com](https://aistudio.google.com/)
+– openrouter: access free models (like mistral or llama) at [openrouter.ai](https://openrouter.ai/)
+– cerebras: offers an incredibly fast free tier at [cloud.cerebras.ai](https://cloud.cerebras.ai/)
+– lm studio (local): download [lmstudio.ai](https://lmstudio.ai/) to run models offline on your own gpu (zero limits, total privacy).
 
-| Provider | Models |
+(note: free api tiers may have rate limits depending on the provider).
+
+## commercial providers
+
+if you have a key, we also support:
+
+| provider | models |
 |----------|--------|
-| **OpenAI** | `gpt-4o`, `gpt-4o-mini` |
-| **Anthropic** | `claude-3-5-sonnet`, `claude-3-haiku` |
-
-## Settings Configuration
-
-| Setting | Description |
-|---------|-------------|
-| **Model Selection** | Manually type any model ID (e.g., `gpt-4o`) |
-| **Temperature** | Controls "creativity". Lower (0.1) is more consistent; higher (0.7+) is more random |
-| **Export/Import** | Save your settings to a JSON file to share with teammates |
+| **openai** | `gpt-4o`, `gpt-4o-mini` |
+| **anthropic** | `claude-3-5-sonnet`, `claude-3-haiku` |
