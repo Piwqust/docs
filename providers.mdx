@@ -1,30 +1,70 @@
 ---
-title: "providers"
+title: "API Providers"
+description: "How to use the plugin 100% for free with Google Gemini, OpenRouter, Cerebras, or local LLMs"
+icon: "key"
 ---
-
-— api providers & free access
 
 layersense is "bring your own key", meaning you are not locked into a subscription.
 
-— how to run 100% free
+## Free Providers
 
-you don't need a credit card. here is where to get free access:
+<Info>
+You don't need a credit card. Here is where to get free access:
+</Info>
 
-1. **google gemini** (recommended) • **get key**: [aistudio.google.com](https://aistudio.google.com/) • **model**: `gemini-1.5-flash` (fastest) or `gemini-2.0-flash-exp`. • **note**: high rate limits, perfect for heavy usage.
-2. **cerebras** • **get key**: [cloud.cerebras.ai](https://cloud.cerebras.ai/) • **model**: `llama3.1-70b` • **note**: incredibly fast, though context may be limited during peak traffic.
-3. **openrouter** • **get key**: [openrouter.ai](https://openrouter.ai/) • **free models**: `mistralai/mistral-7b-instruct:free`, `meta-llama/llama-3-8b-instruct:free`.
-4. **local llms** (lm studio) • **download**: [lmstudio.ai](https://lmstudio.ai/) • **setup**:
-   1. install lm studio.
-   2. load a model (e.g., `qwen 2.5` or `llama 3.2`).
-   3. start the **local inference server**.
-   4. in layersense, select **local (lm studio)**. • **note**: zero data leaves your computer.
+<Tabs>
+  <Tab title="Google Gemini (Recommended)">
+    **Get Key:** [aistudio.google.com](https://aistudio.google.com/)
+    
+    **Models:**
+    - `gemini-1.5-flash` (fastest)
+    - `gemini-2.0-flash-exp`
+    
+    <Note>High rate limits, perfect for heavy usage.</Note>
+  </Tab>
+  
+  <Tab title="Cerebras">
+    **Get Key:** [cloud.cerebras.ai](https://cloud.cerebras.ai/)
+    
+    **Model:** `llama3.1-70b`
+    
+    <Note>Incredibly fast, though context may be limited during peak traffic.</Note>
+  </Tab>
+  
+  <Tab title="OpenRouter">
+    **Get Key:** [openrouter.ai](https://openrouter.ai/)
+    
+    **Free Models:**
+    - `mistralai/mistral-7b-instruct:free`
+    - `meta-llama/llama-3-8b-instruct:free`
+  </Tab>
+  
+  <Tab title="Local LLMs">
+    **Download:** [lmstudio.ai](https://lmstudio.ai/)
+    
+    **Setup:**
+    1. Install LM Studio
+    2. Load a model (e.g., `Qwen 2.5` or `Llama 3.2`)
+    3. Start the **Local Inference Server**
+    4. In layersense, select **Local (LM Studio)**
+    
+    <Check>Zero data leaves your computer.</Check>
+  </Tab>
+</Tabs>
 
-— commercial providers
+## Commercial Providers
 
-if you have a key, we also support: • **openai**: `gpt-4o`, `gpt-4o-mini` • **anthropic**: `claude-3-5-sonnet`, `claude-3-haiku`
+If you have a key, we also support:
 
-— settings configuration
+| Provider | Models |
+|----------|--------|
+| **OpenAI** | `gpt-4o`, `gpt-4o-mini` |
+| **Anthropic** | `claude-3-5-sonnet`, `claude-3-haiku` |
 
-• **model selection**: manually type any model id (e.g., `gpt-4o`). • **temperature**: controls "creativity". lower (0.1) is more consistent; higher (0.7+) is more random. • **export/import**: save your settings to a json file to share with teammates.
+## Settings Configuration
 
-_current as of december 4, 2025_
+| Setting | Description |
+|---------|-------------|
+| **Model Selection** | Manually type any model ID (e.g., `gpt-4o`) |
+| **Temperature** | Controls "creativity". Lower (0.1) is more consistent; higher (0.7+) is more random |
+| **Export/Import** | Save your settings to a JSON file to share with teammates |

@@ -1,31 +1,72 @@
 ---
-title: "features"
+title: "Features & Settings"
+description: "Tailor exactly how the AI names your layers"
+icon: "sliders"
 ---
 
-— detailed features & settings
+Access these options by clicking the **Settings (⚙)** toggle.
 
-access these options by clicking the **settings (⚙)** toggle.
+## Prompt Settings
 
-— prompt settings tailor exactly how the ai names your layers:
+Tailor exactly how the AI names your layers:
 
-• **output language**: – `auto`: detects language based on content. – `en`: forces english names (recommended). – `ru`: forces russian names.
+<AccordionGroup>
+  <Accordion title="Output Language">
+    - `auto` — detects language based on content
+    - `en` — forces English names (recommended)
+    - `ru` — forces Russian names
+  </Accordion>
 
-• **style**: – `Title Case` (e.g., "Submit Button") – `camelCase` (e.g., "submitButton") – `kebab-case` (e.g., "submit-button") – `snake_case` (e.g., "submit_button") – `flatcase` (e.g., "submitbutton")
+  <Accordion title="Naming Style">
+    - `Title Case` (e.g., "Submit Button")
+    - `camelCase` (e.g., "submitButton")
+    - `kebab-case` (e.g., "submit-button")
+    - `snake_case` (e.g., "submit_button")
+    - `flatcase` (e.g., "submitbutton")
+  </Accordion>
 
-• **word count**: set a constraint range (e.g., **2-4 words**) to keep names concise or descriptive.
+  <Accordion title="Word Count">
+    Set a constraint range (e.g., **2-4 words**) to keep names concise or descriptive.
+  </Accordion>
+</AccordionGroup>
 
-— focus strategy tell the ai what is most important:
+## Focus Strategy
 
-• **function**: names based on what the element _does_ (e.g., `SubmitButton`). best for interactive components. • **content**: names based on the _text_ or image inside (e.g., `StartFreeTrialLabel`). best for text layers. • **context**: names based on the _location_ in the layout (e.g., `HeaderContainer`). best for layout frames.
+Tell the AI what is most important:
 
-— advanced controls
+<CardGroup cols={3}>
+  <Card title="Function" icon="bolt">
+    Names based on what the element *does* (e.g., `SubmitButton`). Best for interactive components.
+  </Card>
+  <Card title="Content" icon="text">
+    Names based on the *text* or image inside (e.g., `StartFreeTrialLabel`). Best for text layers.
+  </Card>
+  <Card title="Context" icon="layer-group">
+    Names based on the *location* in the layout (e.g., `HeaderContainer`). Best for layout frames.
+  </Card>
+</CardGroup>
 
-• **detail level**: switch between **minimal** (short), **descriptive**, or **detailed** (verbose) naming. • **parent context**: when enabled, the ai looks at parent layers to understand where the element lives. crucial for nested auto layouts.
+## Advanced Controls
 
-— custom rules ("god mode") type natural language instructions to the ai.
+| Setting | Description |
+|---------|-------------|
+| **Detail Level** | Switch between **minimal** (short), **descriptive**, or **detailed** (verbose) naming |
+| **Parent Context** | When enabled, the AI looks at parent layers to understand where the element lives. Crucial for nested auto layouts |
 
-examples: • "always add a 'btn-' prefix to interactive elements." • "never use the word 'frame' or 'group'." • "if a layer contains an icon, end the name with '\_icon'." • "translate all text content to spanish."
+## Custom Rules ("God Mode")
 
-— utilities
+Type natural language instructions to the AI.
 
-• **statistics**: track how many layers you've successfully renamed. • **developer mode**: enables detailed error logging. • **batch processing**: processes layers in batches of 15 to avoid rate limits.
+<Tip>
+**Examples:**
+- "Always add a 'btn-' prefix to interactive elements."
+- "Never use the word 'frame' or 'group'."
+- "If a layer contains an icon, end the name with '_icon'."
+- "Translate all text content to Spanish."
+</Tip>
+
+## Utilities
+
+- **Statistics** — track how many layers you've successfully renamed
+- **Developer Mode** — enables detailed error logging
+- **Batch Processing** — processes layers in batches of 15 to avoid rate limits
