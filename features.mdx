@@ -1,33 +1,101 @@
 ---
 title: "features & settings"
-description: "tailor exactly how the ai names your layers"
+description: "customize exactly how the ai names your layers"
 icon: "sliders"
 ---
 
-— (4) detailed features & settings
+— (1) accessing settings
 
-access these options by clicking the **settings (⚙)** toggle.
+click the **settings gear** on the right side of the main view to open the settings panel. settings are organized into three tabs: **prompt**, **api**, and **other**.
 
-## prompt settings
+all settings auto-save as you change them.
 
-– tailor exactly how the ai names your layers:
-  - output language: force names in `en` (english), `ru` (russian), or let it detect automatically (`auto`).
-  - style: enforce code standards like `camelCase`, `kebab-case`, `snake_case`, or standard `Title Case`.
-  - word count: set a constraint range (e.g., "2-4 words") to keep names concise or descriptive.
+— (2) prompt settings
 
-– focus strategy:
-  - function: names based on what the element *does* (e.g., "submitbutton").
-  - content: names based on the text inside (e.g., "startfreetriallabel").
-  - context: names based on the location in the layout (e.g., "headercontainer").
+control how the ai generates names:
 
-– detail level: switch between **minimal** (short), **descriptive**, or **detailed** (verbose) naming.
+<AccordionGroup>
+  <Accordion title="context" icon="file-lines">
+    describe your project or the selected frames. example: "e-commerce checkout flow" or "mobile banking app". this helps the ai understand the purpose of your layers.
+  </Accordion>
+  <Accordion title="output language" icon="language">
+    - **en** — names in english
+    - **ru** — names in russian (кириллица)
+    - **auto** — ai detects from text content
+  </Accordion>
+  <Accordion title="naming style" icon="text-size">
+    choose the format for generated names:
+    - **title case** — "User Profile Header"
+    - **camelcase** — "userProfileHeader"
+    - **kebab-case** — "user-profile-header"
+    - **snake_case** — "user_profile_header"
+    - **flatcase** — "userprofileheader"
+  </Accordion>
+  <Accordion title="word count" icon="arrows-left-right">
+    set minimum and maximum words per name (e.g., 2–4). keeps names concise or allows more detail.
+  </Accordion>
+  <Accordion title="focus" icon="crosshairs">
+    - **function** — names based on what the element does (e.g., "submit button")
+    - **content** — names based on text inside (e.g., "start free trial label")
+    - **context** — names based on location in layout (e.g., "header container")
+  </Accordion>
+  <Accordion title="detail level" icon="sliders">
+    - **short** — minimal, concise names
+    - **medium** — clear descriptive names
+    - **long** — comprehensive names with full context
+  </Accordion>
+  <Accordion title="include parent context" icon="sitemap">
+    when enabled, the ai considers parent layer names to understand where the element lives. useful for nested auto-layouts.
+  </Accordion>
+  <Accordion title="custom rules" icon="wand-magic-sparkles">
+    your personal naming instructions. examples:
+    - "always add 'btn-' prefix to buttons"
+    - "don't use the word 'frame'"
+    - "use abbreviations for common terms"
+    
+    the ai follows these rules when generating names.
+  </Accordion>
+</AccordionGroup>
 
-– parent context: when enabled, the ai looks at the parent layers to understand where the element lives (crucial for nested auto-layouts).
+— (3) api settings
 
-– custom rules: the "god mode" for naming. type instructions like "always add 'btn-' prefix to buttons" or "don't use the word 'frame'", and the ai will obey.
+configure your ai provider connection:
 
-## utilities
+| setting | description |
+|---------|-------------|
+| **provider** | cerebras (default), openai, anthropic, google gemini, openrouter, or local (lm studio) |
+| **api key** | your provider's api key (not needed for local) |
+| **endpoint** | only for local provider — default is `http://127.0.0.1:1234/v1/chat/completions` |
+| **model** | the model to use (e.g., `gpt-oss-120b`, `gpt-5-nano`, `gemini-2.0-flash`) |
+| **temperature** | creativity level 0–2. lower = more consistent, higher = more creative. default 0.5 |
 
-– **statistics** — track how many layers you've successfully renamed
-– **developer mode** — enables detailed error logging
-– **batch processing** — processes layers in batches of 15 to avoid rate limits
+— (4) other settings
+
+<AccordionGroup>
+  <Accordion title="settings presets" icon="download">
+    **export** — save your current settings to a json file for backup or sharing with teammates.
+    
+    **import** — load settings from a previously exported file.
+  </Accordion>
+  <Accordion title="localization" icon="globe">
+    switch the plugin interface between english (en) and russian (ru).
+  </Accordion>
+  <Accordion title="developer mode" icon="code">
+    enables detailed error logging. when an error occurs, the debug log is automatically copied to your clipboard for troubleshooting.
+  </Accordion>
+  <Accordion title="statistics" icon="chart-bar">
+    track your usage:
+    - **total renamed** — cumulative count of layers renamed
+    - **sessions** — number of rename operations performed
+  </Accordion>
+</AccordionGroup>
+
+— (5) batch processing
+
+the plugin processes layers in **batches of 15** to:
+
+- avoid rate limits from ai providers
+- handle large selections efficiently
+- provide progress feedback
+
+progress is shown as a percentage in the main circle. you can cancel at any time by hovering over the progress ring and clicking cancel.

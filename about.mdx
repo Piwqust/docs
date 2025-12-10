@@ -4,20 +4,52 @@ description: "the story behind the plugin and why it's free"
 icon: "heart"
 ---
 
+— (1) the problem
+
+every designer knows the pain: you're deep in a project, layers piling up, and suddenly you're staring at "frame 427", "rectangle 89", and "group 12". finding anything becomes a nightmare. handoff to developers? good luck explaining what "frame 312" is supposed to be.
+
+existing solutions either:
+- cost money every month
+- use simple find-and-replace patterns that don't understand context
+- require complex setup
+
 — (2) why i built this
 
-i created this tool because i faced a common frustration: looking for a layer renamer and finding that every good solution was behind a paywall. the few free options available didn't actually use ai and couldn't understand context.
+i wanted a tool that:
+- actually understands what a layer is (not just its type)
+- works for free — no subscriptions, no trials, no "free for 10 layers"
+- respects privacy — your designs shouldn't go through random servers
+- lets you bring your own ai provider
 
-i wanted a tool that puts you in control – allowing you to use your own api keys (including free tiers) or run local llms, ensuring you never have to pay to keep your file organized.
+the solution: connect directly to free ai apis like cerebras or google gemini, or run completely offline with local models. you control everything.
 
-## privacy first
+— (3) privacy first
 
-because layersense connects directly to your provider:
+layersense connects **directly** to your chosen ai provider:
 
-– your layer data goes straight from figma to the ai provider
-– it **does not** pass through any layersense middleman server
-– if you use **local llms**, your design data never leaves your computer
+- your layer data goes straight from figma → ai provider → back to figma
+- **no middleman servers** — layersense has no backend
+- **nothing is stored** — the plugin doesn't log or save your designs
+- **local option** — with lm studio, your data never leaves your computer
 
-## open source
+this is possible because figma plugins can make direct http requests. we just pass your layer info to the ai api you configure.
 
-we believe essential workflow tools shouldn't be gated behind rent-seeking subscriptions.
+— (4) how it stays free
+
+the plugin itself is free. the ai costs are covered by:
+
+- **free api tiers** — cerebras, google gemini, and openrouter offer generous free access
+- **your own keys** — if you have openai or anthropic credits, use them
+- **local models** — lm studio runs on your hardware with zero cost
+
+there's no catch. no premium tier coming. no "upgrade to rename more than 50 layers".
+
+— (5) open approach
+
+the plugin code runs entirely in your figma client. the settings are stored locally in figma's client storage. the only external calls are the ai api requests you configure.
+
+we believe essential workflow tools shouldn't be gated behind rent-seeking subscriptions. if it helps you work faster, it should just work.
+
+— (6) feedback
+
+found a bug? have a feature idea? use the **feedback** button in the plugin footer. your message is saved locally and helps improve the plugin.

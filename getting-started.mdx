@@ -1,31 +1,71 @@
 ---
 title: "getting started"
-description: "learn how to install, connect your first ai provider, and rename your first layer"
+description: "install layersense and rename your first layers in under 2 minutes"
 icon: "rocket"
 ---
 
-— (3) how it works
+— (1) how it works
 
-1. select the layers or frames you want to tidy up.
-2. connect an ai provider (paste a free api key or connect to lm studio).
-3. click "rename" —the plugin sends the layer structure to the ai, which returns perfectly formatted names based on your settings.
+1. select the layers or frames you want to tidy up
+2. connect an ai provider (paste a free api key or connect to lm studio)
+3. click the big green circle — the plugin sends the layer structure to the ai, which returns perfectly formatted names based on your settings
 
-## installation
+the plugin processes layers in batches of 15 with automatic retry logic for rate limits.
+
+— (2) installation
 
 <Steps>
   <Step title="install from figma community">
-    install **layersense** from the figma community.
+    search for **layersense** in the figma community and click install.
   </Step>
   <Step title="run the plugin">
-    press `cmd + /` (or `ctrl + /` on windows) and type "layersense".
+    press `cmd + /` (or `ctrl + /` on windows) and type "layersense" to launch.
+  </Step>
+  <Step title="get your free api key">
+    the plugin defaults to cerebras. get your free key at [cloud.cerebras.ai](https://cloud.cerebras.ai) — see the [providers guide](/providers) for step-by-step instructions.
+  </Step>
+  <Step title="paste your key and rename">
+    click the settings gear, go to the **api** tab, paste your key, then go back and select some layers to rename.
   </Step>
 </Steps>
 
-## first run tips
+— (3) quick start checklist
+
+<AccordionGroup>
+  <Accordion title="select layers first" icon="mouse-pointer">
+    you must have at least one layer selected before clicking rename. the plugin only renames layers with default figma names like "frame 1", "rectangle 12", "text 5", etc.
+  </Accordion>
+  <Accordion title="start small" icon="seedling">
+    try selecting just one frame or a small group of elements first to see how the ai interprets them. once you're comfortable, select larger sections.
+  </Accordion>
+  <Accordion title="check your hierarchy" icon="sitemap">
+    the ai works best when it can see the hierarchy (e.g., buttons inside containers). well-structured layouts produce better names.
+  </Accordion>
+  <Accordion title="verify api connection" icon="plug">
+    if nothing happens after clicking rename, check the [providers](/providers) guide to ensure your api key is valid and the endpoint is correct.
+  </Accordion>
+</AccordionGroup>
+
+— (4) what gets renamed
+
+the plugin identifies and renames layers that:
+
+- have default figma names (frame, group, rectangle, text, ellipse, vector, etc.)
+- are visible and unlocked
+- are not nested inside component instances (to preserve component structure)
+
+layers with custom names you've already set are skipped.
+
+— (5) troubleshooting
 
 <Warning>
-**start small** — try selecting just one frame or a small group of elements to see how the ai interprets them.
+**no layers to rename?** this means all selected layers either already have custom names or are locked/hidden. try selecting a frame that contains default-named children.
 </Warning>
 
-– **check your context** — ensure your layers are reasonably structured. the ai works best when it can see the hierarchy (e.g., buttons inside containers).
-– **verify the api** — if nothing happens, check the [providers](/providers) guide to ensure your api key is valid.
+| issue | solution |
+|-------|----------|
+| "select layers to rename" | select at least one layer before clicking the rename button |
+| nothing happens | check your api key in settings → api tab |
+| rate limit errors | the plugin automatically retries with delays; wait a moment |
+| slow response | try a faster model like `gpt-oss-120b` on cerebras or `gemini-2.0-flash` |
+| names don't match expectations | adjust focus, verbosity, or add custom rules in settings |

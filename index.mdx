@@ -1,6 +1,6 @@
 ---
 title: "layersense"
-description: "ai-powered layer renaming for figma"
+description: "ai-powered layer renaming for figma — 100% free"
 ---
 
 <img
@@ -16,9 +16,9 @@ description: "ai-powered layer renaming for figma"
 
 — (1) what it does
 
-stop wasting time manually renaming "frame 45" and "rectangle 12". this plugin uses artificial intelligence to analyze your layers – their visual content, hierarchy, and text – to generate meaningful, semantic names automatically.
+stop wasting time manually renaming "frame 45" and "rectangle 12". layersense uses artificial intelligence to analyze your layers — their visual content, hierarchy, and text — to generate meaningful, semantic names automatically.
 
-the main difference: unlike other plugins that require a paid subscription or rely on simple pattern matching, this plugin is designed to be 100% free to use. it connects to free ai providers (like google gemini or openrouter) or even runs locally on your computer, giving you unlimited renaming power without monthly fees.
+the main difference: unlike other plugins that require paid subscriptions or rely on simple pattern matching, layersense is designed to be **100% free**. it connects to free ai providers like cerebras or google gemini, or even runs locally on your computer using lm studio, giving you unlimited renaming power without monthly fees.
 
 <CardGroup cols={2}>
   <Card
@@ -26,44 +26,58 @@ the main difference: unlike other plugins that require a paid subscription or re
     icon="rocket"
     href="/getting-started"
   >
-    install the plugin and rename your first layer in minutes.
+    install the plugin and rename your first layers in under 2 minutes.
   </Card>
   <Card
-    title="api providers"
+    title="free api setup"
     icon="key"
     href="/providers"
   >
-    use the plugin 100% free with google gemini, openrouter, or local llms.
+    get your free cerebras api key and start renaming — no credit card needed.
   </Card>
   <Card
     title="features & settings"
     icon="sliders"
     href="/features"
   >
-    customize naming styles, languages, and advanced rules.
+    customize naming styles, languages, focus, and advanced rules.
   </Card>
   <Card
     title="why layersense?"
     icon="heart"
     href="/about"
   >
-    the story behind the plugin and why it's free.
+    the story behind the plugin and why it's free forever.
   </Card>
 </CardGroup>
 
 — (2) key features
 
 <AccordionGroup>
-  <Accordion title="bring your own key" icon="key">
-    use your own api keys from openai, anthropic, google, or any openai-compatible provider. no subscription fees.
+  <Accordion title="100% free with cerebras" icon="gift">
+    cerebras offers a free api tier with blazing-fast inference (3,000+ tokens/sec). create an account at cloud.cerebras.ai, grab your key, and you're ready to go — no credit card required.
   </Accordion>
-  <Accordion title="100% free options" icon="gift">
-    take advantage of free tiers from google gemini, cerebras, and openrouter — no credit card required.
+  <Accordion title="multiple free providers" icon="key">
+    choose from cerebras, google gemini, openrouter free models, or run completely offline with lm studio. you always own your api keys.
   </Accordion>
-  <Accordion title="local llm support" icon="server">
-    run models on your own hardware with lm studio. your design data never leaves your computer.
+  <Accordion title="smart batch processing" icon="layer-group">
+    processes layers in batches of 15 with automatic retry logic and rate limit handling. handles large selections efficiently.
   </Accordion>
   <Accordion title="privacy first" icon="shield-check">
-    direct connection to your ai provider. no middleman servers. your data stays yours.
+    direct connection to your ai provider. no middleman servers. your design data goes straight from figma to the ai and back — nothing is stored.
+  </Accordion>
+  <Accordion title="local llm support" icon="server">
+    run models on your own hardware with lm studio. your design data never leaves your computer. zero limits, total privacy.
   </Accordion>
 </AccordionGroup>
+
+— (3) supported models (december 2025)
+
+| provider | recommended models | notes |
+|----------|-------------------|-------|
+| **cerebras** | `gpt-oss-120b`, `qwq-32b`, `llama-3.3-70b` | free tier, ultra-fast |
+| **openai** | `gpt-5-nano`, `gpt-4o-mini`, `gpt-4o` | paid, fastest |
+| **anthropic** | `claude-sonnet-4-20250514`, `claude-3-haiku` | paid |
+| **google gemini** | `gemini-2.0-flash`, `gemini-1.5-flash` | generous free tier |
+| **openrouter** | `mistralai/mistral-7b-instruct:free` | free models available |
+| **local** | any model via lm studio | completely offline |
