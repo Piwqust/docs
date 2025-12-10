@@ -18,8 +18,7 @@
             "group": "introduction",
             "pages": [
               "index",
-              "getting-started",
-              "about"
+              "getting-started"
             ]
           },
           {
@@ -38,8 +37,7 @@
             "group": "введение",
             "pages": [
               "index.ru",
-              "getting-started.ru",
-              "about.ru"
+              "getting-started.ru"
             ]
           },
           {
