@@ -4,15 +4,13 @@ description: "install layersense and rename your first layers in under 2 minutes
 icon: "rocket"
 ---
 
-— (1) how it works
+— how it works
 
-1. select the layers or frames you want to tidy up
-2. connect an ai provider (paste a free api key or connect to lm studio)
-3. click the big green circle — the plugin sends the layer structure to the ai, which returns perfectly formatted names based on your settings
+1. select layers to rename
+2. connect an ai provider (paste a free api key or use lm studio)
+3. click the green circle — ai generates meaningful names based on your settings
 
-the plugin processes layers in batches of 15 with automatic retry logic for rate limits.
-
-— (2) installation
+— installation
 
 <Steps>
   <Step title="install from figma community">
@@ -29,7 +27,7 @@ the plugin processes layers in batches of 15 with automatic retry logic for rate
   </Step>
 </Steps>
 
-— (3) quick start checklist
+— quick tips
 
 <AccordionGroup>
   <Accordion title="select layers first" icon="mouse-pointer">
@@ -46,17 +44,7 @@ the plugin processes layers in batches of 15 with automatic retry logic for rate
   </Accordion>
 </AccordionGroup>
 
-— (4) what gets renamed
-
-the plugin identifies and renames layers that:
-
-- have default figma names (frame, group, rectangle, text, ellipse, vector, etc.)
-- are visible and unlocked
-- are not nested inside component instances (to preserve component structure)
-
-layers with custom names you've already set are skipped.
-
-— (5) troubleshooting
+— troubleshooting
 
 <Warning>
 **no layers to rename?** this means all selected layers either already have custom names or are locked/hidden. try selecting a frame that contains default-named children.

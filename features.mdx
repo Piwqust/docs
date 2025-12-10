@@ -4,13 +4,9 @@ description: "customize exactly how the ai names your layers"
 icon: "sliders"
 ---
 
-— (1) accessing settings
+— prompt settings
 
-click the **settings gear** on the right side of the main view to open the settings panel. settings are organized into three tabs: **prompt**, **api**, and **other**.
-
-all settings auto-save as you change them.
-
-— (2) prompt settings
+click the **settings gear** to access settings. all settings auto-save.
 
 control how the ai generates names:
 
@@ -57,7 +53,7 @@ control how the ai generates names:
   </Accordion>
 </AccordionGroup>
 
-— (3) api settings
+— api settings
 
 configure your ai provider connection:
 
@@ -69,7 +65,7 @@ configure your ai provider connection:
 | **model** | the model to use (e.g., `gpt-oss-120b`, `gpt-5.1`, `claude-sonnet-4-5`, `gemini-3-pro`) |
 | **temperature** | creativity level 0–2. lower = more consistent, higher = more creative. default 0.5 |
 
-— (4) other settings
+— other settings
 
 <AccordionGroup>
   <Accordion title="settings presets" icon="download">
@@ -80,22 +76,5 @@ configure your ai provider connection:
   <Accordion title="localization" icon="globe">
     switch the plugin interface between english (en) and russian (ru).
   </Accordion>
-  <Accordion title="developer mode" icon="code">
-    enables detailed error logging. when an error occurs, the debug log is automatically copied to your clipboard for troubleshooting.
-  </Accordion>
-  <Accordion title="statistics" icon="chart-bar">
-    track your usage:
-    - **total renamed** — cumulative count of layers renamed
-    - **sessions** — number of rename operations performed
-  </Accordion>
 </AccordionGroup>
 
-— (5) batch processing
-
-the plugin processes layers in **batches of 15** to:
-
-- avoid rate limits from ai providers
-- handle large selections efficiently
-- provide progress feedback
-
-progress is shown as a percentage in the main circle. you can cancel at any time by hovering over the progress ring and clicking cancel.

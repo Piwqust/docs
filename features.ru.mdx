@@ -1,0 +1,80 @@
+---
+title: "функции и настройки"
+description: "Тонкая настройка того, как ИИ называет ваши слои"
+icon: "sliders"
+---
+
+— настройки промта
+
+откройте **шестерёнку настроек**, чтобы задать стиль именования. изменения сохраняются автоматически.
+
+управляйте тем, как ИИ генерирует имена:
+
+<AccordionGroup>
+  <Accordion title="контекст" icon="file-lines">
+    кратко опишите проект или выбранные фреймы: "оформление заказа в e-commerce", "мобильное банковское приложение". так ИИ точнее поймёт назначение слоёв.
+  </Accordion>
+  <Accordion title="язык вывода" icon="language">
+    - **en** — английские имена
+    - **ru** — русские имена (кириллица)
+    - **auto** — язык выбирается по содержимому слоёв
+  </Accordion>
+  <Accordion title="стиль именования" icon="text-size">
+    выберите формат:
+    - **title case** — "User Profile Header"
+    - **camelcase** — "userProfileHeader"
+    - **kebab-case** — "user-profile-header"
+    - **snake_case** — "user_profile_header"
+    - **flatcase** — "userprofileheader"
+  </Accordion>
+  <Accordion title="количество слов" icon="arrows-left-right">
+    задайте минимальное и максимальное количество слов (например, 2–4), чтобы сохранить баланс между краткостью и деталями.
+  </Accordion>
+  <Accordion title="фокус" icon="crosshairs">
+    - **function** — что элемент делает: "submit button"
+    - **content** — что внутри: "start free trial label"
+    - **context** — где находится: "header container"
+  </Accordion>
+  <Accordion title="уровень детализации" icon="sliders">
+    - **short** — лаконичные имена
+    - **medium** — баланс точности и длины
+    - **long** — максимально подробные имена с контекстом
+  </Accordion>
+  <Accordion title="включить контекст родителя" icon="sitemap">
+    учитывает имена родительских слоёв, чтобы точнее определить расположение. особенно полезно для вложенных auto-layout.
+  </Accordion>
+  <Accordion title="пользовательские правила" icon="wand-magic-sparkles">
+    задайте свои инструкции. примеры:
+    - "добавлять префикс 'btn-' к кнопкам"
+    - "не использовать слово 'frame'"
+    - "использовать аббревиатуры для общих терминов"
+
+    ИИ придерживается этих правил при генерации имён.
+  </Accordion>
+</AccordionGroup>
+
+— настройки api
+
+подключите выбранного ИИ-провайдера:
+
+| настройка | описание |
+|-----------|----------|
+| **provider** | cerebras (по умолчанию), openai, anthropic, google gemini, openrouter или local (lm studio) |
+| **api key** | ваш api ключ провайдера (не нужен для local) |
+| **endpoint** | для local: `http://127.0.0.1:1234/v1/chat/completions` по умолчанию |
+| **model** | выбранная модель, например `gpt-oss-120b`, `gpt-5.1`, `claude-sonnet-4-5`, `gemini-3-pro` |
+| **temperature** | креативность 0–2: ниже — стабильнее, выше — смелее. по умолчанию 0.5 |
+
+— другие настройки
+
+<AccordionGroup>
+  <Accordion title="пресеты настроек" icon="download">
+    **экспорт** — сохраните текущие настройки в json для бэкапа или обмена.
+
+    **импорт** — загрузите готовый пресет и моментально примените его.
+  </Accordion>
+  <Accordion title="локализация" icon="globe">
+    переключайте интерфейс плагина между английским (en) и русским (ru).
+  </Accordion>
+</AccordionGroup>
+

@@ -1,55 +1,21 @@
 ---
 title: "why layersense?"
-description: "the story behind the plugin and why it's free"
+description: "free, privacy-first ai layer naming"
 icon: "heart"
 ---
 
-— (1) the problem
+## why layersense?
 
-every designer knows the pain: you're deep in a project, layers piling up, and suddenly you're staring at "frame 427", "rectangle 89", and "group 12". finding anything becomes a nightmare. handoff to developers? good luck explaining what "frame 312" is supposed to be.
+layersense is **100% free** and **privacy-first**. your layer data connects directly to your chosen ai provider—no middleman, no logs, no tracking.
 
-existing solutions either:
-- cost money every month
-- use simple find-and-replace patterns that don't understand context
-- require complex setup
+### free forever
 
-— (2) why i built this
-
-i wanted a tool that:
-- actually understands what a layer is (not just its type)
-- works for free — no subscriptions, no trials, no "free for 10 layers"
-- respects privacy — your designs shouldn't go through random servers
-- lets you bring your own ai provider
-
-the solution: connect directly to free ai apis like cerebras or google gemini, or run completely offline with local models. you control everything.
-
-— (3) privacy first
-
-layersense connects **directly** to your chosen ai provider:
-
-- your layer data goes straight from figma → ai provider → back to figma
-- **no middleman servers** — layersense has no backend
-- **nothing is stored** — the plugin doesn't log or save your designs
-- **local option** — with lm studio, your data never leaves your computer
-
-this is possible because figma plugins can make direct http requests. we just pass your layer info to the ai api you configure.
-
-— (4) how it stays free
-
-the plugin itself is free. the ai costs are covered by:
-
-- **free api tiers** — cerebras, google gemini, and openrouter offer generous free access
-- **your own keys** — if you have openai or anthropic credits, use them
+- **free api tiers** — cerebras, google gemini offer generous free access
+- **bring your own keys** — use existing openai or anthropic credits
 - **local models** — lm studio runs on your hardware with zero cost
 
-there's no catch. no premium tier coming. no "upgrade to rename more than 50 layers".
+### privacy guaranteed
 
-— (5) open approach
-
-the plugin code runs entirely in your figma client. the settings are stored locally in figma's client storage. the only external calls are the ai api requests you configure.
-
-we believe essential workflow tools shouldn't be gated behind rent-seeking subscriptions. if it helps you work faster, it should just work.
-
-— (6) feedback
-
-found a bug? have a feature idea? use the **feedback** button in the plugin footer. your message is saved locally and helps improve the plugin.
+- direct connection: figma → ai provider → back to figma
+- no backend servers or data collection
+- local option with lm studio keeps everything on your computer
