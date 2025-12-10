@@ -8,7 +8,7 @@
     "light": "#e8f5e7",
     "dark": "#7dd878"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "groups": [
       {
@@ -35,19 +35,14 @@
     ]
   },
   "logo": {
-    "light": "/logo.svg",
-    "dark": "/logo.svg"
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
   },
   "navbar": {
     "primary": {
       "type": "button",
       "label": "install plugin",
-      "href": "https://www.figma.com/community"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com"
+      "href": "https://www.figma.com/community/plugin/1578034340595628711/layersense-ai-layer-renamer-zero-cost"
     }
   }
 }
