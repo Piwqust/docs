@@ -4,9 +4,9 @@
   "name": "layersense",
   "description": "ai-powered layer renaming for figma — 100% free with cerebras, gemini, or local llms.",
   "colors": {
-    "primary": "#57592A",
-    "light": "#dbe0d9",
-    "dark": "#57592A"
+    "primary": "#92eb8d",
+    "light": "#e8f5e7",
+    "dark": "#7dd878"
   },
   "favicon": "/favicon.svg",
   "navigation": {

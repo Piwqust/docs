@@ -24,9 +24,9 @@ cerebras is the default provider because it offers:
   </Step>
   <Step title="select a model">
     recommended models:
-    - `gpt-oss-120b` — best quality, 128k context
-    - `qwq-32b` — fast reasoning model
-    - `llama-3.3-70b` — balanced performance
+    - `gpt-oss-120b` — best quality, 128k context, 3,000+ tok/s
+    - `llama-3.3-70b` — balanced performance, 2,100 tok/s
+    - `qwen-3-32b` — fast and efficient, 2,600 tok/s
   </Step>
 </Steps>
 
@@ -46,8 +46,9 @@ google offers a generous free tier for gemini models.
     settings → api tab → provider: **google gemini** → paste your key.
   </Step>
   <Step title="select a model">
-    - `gemini-2.0-flash` — fast and capable
-    - `gemini-1.5-flash` — reliable and efficient
+    - `gemini-3-pro` — newest, most intelligent (preview)
+    - `gemini-2.5-flash` — best price-performance, 1M context
+    - `gemini-2.5-pro` — advanced thinking model
   </Step>
 </Steps>
 
@@ -67,8 +68,8 @@ openrouter aggregates multiple providers and offers some free models.
   </Step>
   <Step title="use free models">
     look for models tagged `:free` like:
-    - `mistralai/mistral-7b-instruct:free`
-    - `meta-llama/llama-3-8b-instruct:free`
+    - `mistralai/devstral-2512:free` — 123b coding specialist
+    - `meta-llama/llama-3-8b-instruct:free` — balanced all-purpose
   </Step>
 </Steps>
 
@@ -104,15 +105,15 @@ if you already have api keys from paid providers:
 
 | provider | setup | recommended models |
 |----------|-------|-------------------|
-| **openai** | paste your key, select provider "openai" | `gpt-5-nano` (cheapest), `gpt-4o-mini`, `gpt-4o` |
-| **anthropic** | paste your key, select provider "anthropic" | `claude-sonnet-4-20250514`, `claude-3-haiku` |
+| **openai** | paste your key, select provider "openai" | `gpt-5.1` (best for agents), `gpt-5-nano` (cheapest), `gpt-4.1-mini` |
+| **anthropic** | paste your key, select provider "anthropic" | `claude-sonnet-4-5` (best balance), `claude-haiku-4-5` (fastest), `claude-opus-4-5` (most capable) |
 
 — (6) which provider should i use?
 
 | your situation | recommended provider |
 |----------------|---------------------|
-| just want it to work for free | **cerebras** with `gpt-oss-120b` |
+| just want it to work for free | **cerebras** with `gpt-oss-120b` (3,000+ tok/s) |
 | need maximum privacy | **local** with lm studio |
 | already have openai/anthropic keys | use your existing provider |
+| want cutting-edge intelligence | **google gemini** with `gemini-3-pro` |
 | want to try different models | **openrouter** for variety |
-| google ecosystem user | **google gemini** |

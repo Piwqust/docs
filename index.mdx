@@ -55,7 +55,7 @@ the main difference: unlike other plugins that require paid subscriptions or rel
 
 <AccordionGroup>
   <Accordion title="100% free with cerebras" icon="gift">
-    cerebras offers a free api tier with blazing-fast inference (3,000+ tokens/sec). create an account at cloud.cerebras.ai, grab your key, and you're ready to go — no credit card required.
+    cerebras offers a free api tier with blazing-fast inference (up to 3,000 tokens/sec). production models include gpt-oss-120b (128k context), llama-3.3-70b, and qwen-3-32b. create an account at cloud.cerebras.ai, grab your key, and you're ready to go — no credit card required.
   </Accordion>
   <Accordion title="multiple free providers" icon="key">
     choose from cerebras, google gemini, openrouter free models, or run completely offline with lm studio. you always own your api keys.
@@ -75,9 +75,9 @@ the main difference: unlike other plugins that require paid subscriptions or rel
 
 | provider | recommended models | notes |
 |----------|-------------------|-------|
-| **cerebras** | `gpt-oss-120b`, `qwq-32b`, `llama-3.3-70b` | free tier, ultra-fast |
-| **openai** | `gpt-5-nano`, `gpt-4o-mini`, `gpt-4o` | paid, fastest |
-| **anthropic** | `claude-sonnet-4-20250514`, `claude-3-haiku` | paid |
-| **google gemini** | `gemini-2.0-flash`, `gemini-1.5-flash` | generous free tier |
-| **openrouter** | `mistralai/mistral-7b-instruct:free` | free models available |
+| **cerebras** | `gpt-oss-120b`, `llama-3.3-70b`, `qwen-3-32b` | free tier, ultra-fast (3,000+ tok/s) |
+| **openai** | `gpt-5.1`, `gpt-5-nano`, `gpt-4.1-mini` | paid, reasoning & agentic tasks |
+| **anthropic** | `claude-sonnet-4-5`, `claude-haiku-4-5` | paid, 200k context |
+| **google gemini** | `gemini-3-pro`, `gemini-2.5-flash` | generous free tier, 1M context |
+| **openrouter** | `mistralai/devstral-2512:free` | free models available |
 | **local** | any model via lm studio | completely offline |
