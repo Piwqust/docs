@@ -3,11 +3,6 @@
   "theme": "mint",
   "name": "layersense",
   "description": "ai-powered layer renaming for figma — 100% free with cerebras, gemini, or local llms.",
-  "defaultLanguage": "en",
-  "languages": [
-    { "name": "English", "code": "en" },
-    { "name": "Русский", "code": "ru" }
-  ],
   "colors": {
     "primary": "#7dd878",
     "light": "#e8f5e7",
@@ -15,20 +10,45 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "introduction",
-        "pages": [
-          "index",
-          "getting-started",
-          "about"
+        "language": "en",
+        "groups": [
+          {
+            "group": "introduction",
+            "pages": [
+              "index",
+              "getting-started",
+              "about"
+            ]
+          },
+          {
+            "group": "configuration",
+            "pages": [
+              "providers",
+              "features"
+            ]
+          }
         ]
       },
       {
-        "group": "configuration",
-        "pages": [
-          "providers",
-          "features"
+        "language": "ru",
+        "groups": [
+          {
+            "group": "введение",
+            "pages": [
+              "index.ru",
+              "getting-started.ru",
+              "about.ru"
+            ]
+          },
+          {
+            "group": "настройка",
+            "pages": [
+              "providers.ru",
+              "features.ru"
+            ]
+          }
         ]
       }
     ]
